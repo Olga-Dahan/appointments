@@ -9,6 +9,7 @@ export const getAllByGroup = async (req: Request, res: Response, next: NextFunct
     } catch (err) {
         next(err)
     }
+    console.log("hi")
 }
 
 
