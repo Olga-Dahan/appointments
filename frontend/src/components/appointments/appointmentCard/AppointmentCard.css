@@ -1,0 +1,30 @@
+.AppointmentCard {
+    width: 300px;
+    height: 130px;
+    display: inline-flex;
+    background-image: linear-gradient(90deg, #724caf, white);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+    text-align: left;
+}
+
+.AppointmentCard div {
+    width: inherit;
+    position: relative;
+}
+
+
+.AppointmentCard button {
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0%;
+    left:42%;
+}
+
+.AppointmentCard button:hover {
+    background-color: #b1a6c2;
+    color: rgb(52, 19, 53);
+}
