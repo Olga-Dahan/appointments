@@ -36,10 +36,16 @@ function Add(): JSX.Element {
 
         <div className="Add">
             <form onSubmit={handleSubmit(addAppointment)}>
-                <select defaultValue=''  {...register('groupId')} required>
+                <select defaultValue=''  {...register('groupId', { 
+                    required: {
+                        value: true,
+                        message: 'this field is required'
+                    }
+                })} >
                     <option disabled value=''>Please select group</option>
                     {groups.map(group => <option key={group.id} value={group.id}>{group.name}</option>)}
                 </select>
+                <span className="error">{formState.errors.groupId?.message}</span>
 
                 <input type="datetime-local" placeholder="appointment starts" {...register('startAppointment', {
                     required: {
